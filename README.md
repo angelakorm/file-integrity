@@ -6,4 +6,5 @@
 
 ### Packages
 - .env: `pip install python-dotenv`
-- Microsoft Authentication Libraries (MSAL): `pip install msal` 
+- Microsoft Authentication Libraries (MSAL): `pip install msal`
+- requests: `pip install requests`
