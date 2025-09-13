@@ -5,4 +5,5 @@
 - Python 3.6+.
 
 ### Packages
+- .env: `pip install python-dotenv`
 - Microsoft Authentication Libraries (MSAL): `pip install msal` 
