@@ -10,3 +10,5 @@ class Config:
     GRAPH_API = os.getenv("GRAPH_API")
     VERSION = os.getenv("VERSION")
     RESOURCE = os.getenv("RESOURCE")
+    UPLOAD_FOLDER = os.getenv("UPLOAD_FOLDER")
+    LOCAL_FILE_PATH = os.getenv("LOCAL_FILE_PATH")

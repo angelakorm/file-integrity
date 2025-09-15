@@ -32,7 +32,8 @@ def upload_file(access_token, folder_name, file_path):
         "Content-Type": "application/json"
     }
 
-    response = requests.put(url, headers=headers, data=open(file_path, "rb"))
+    with open(file_path, "rb") as file_data:
+        response = requests.put(url, headers=headers, data=file_data)
 
     if response.status_code in [200, 201]:
         print("File uploaded successfully.")
