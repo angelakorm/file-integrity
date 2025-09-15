@@ -11,11 +11,11 @@ def get_token():
         for a in accounts:
             print(a["username"])
         chosen = accounts[0]
-        result = app.acquire_token_silent(["User.Read"], account=chosen)
+        result = app.acquire_token_silent([Config.SCOPES], account=chosen)
 
     if not result:
         print("No suitable token in cache found, getting a new one from Azure AD.")
-        result = app.acquire_token_interactive(scopes=["User.Read"], prompt="select_account")
+        result = app.acquire_token_interactive(scopes=[Config.SCOPES], prompt="select_account")
 
     if "access_token" in result:
         print("Authentication success. This is your token: ")
