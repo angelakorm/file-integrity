@@ -3,7 +3,7 @@ import requests
 import os
 
 def create_folder(access_token, folder_name):
-    url = f"{Config.GRAPH_API}/{Config.VERSION}/{Config.RESOURCE}"
+    url = f"{Config.GRAPH_API}/{Config.VERSION}/{Config.RESOURCE}/root/children"
 
     headers = {
         "Authorization": f"Bearer {access_token}",
@@ -25,7 +25,7 @@ def create_folder(access_token, folder_name):
 
 def upload_file(access_token, folder_name, file_path):
     file_name = os.path.basename(file_path)
-    url = f"{Config.GRAPH_API}/{Config.VERSION}/me/drive/root:/{folder_name}/{file_name}:/content"
+    url = f"{Config.GRAPH_API}/{Config.VERSION}/{Config.RESOURCE}/root:/{folder_name}/{file_name}:/content"
 
     headers = {
         "Authorization": f"Bearer {access_token}",
