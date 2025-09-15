@@ -1,5 +1,8 @@
 # created by virtualenv automatically
 .env
-venv/
+Lib/
+Scripts/
+.idea/
+__pycache__/
 CACHEDIR.TAG
 pyvenv.cfg
