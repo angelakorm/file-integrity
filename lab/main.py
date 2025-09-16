@@ -1,11 +1,11 @@
-from lab import authentication, upload, download, integrity_verification, performance_measure
+from lab import authentication, upload, download, integrity_verification, performance_measure, create_folder
 from config import Config
 import os
 
 def main():
     access_token = authentication.get_token()
 
-    _, elapsed, mem = performance_measure.measure_performance(upload.create_folder, access_token, Config.UPLOAD_FOLDER)
+    _, elapsed, mem = performance_measure.measure_performance(create_folder.create_folder, access_token, Config.UPLOAD_FOLDER)
     print(f"Create folder: {elapsed:.4f}s, {mem:.4f} MiB")
     _, elapsed, mem = performance_measure.measure_performance(upload.upload_file, access_token, Config.UPLOAD_FOLDER, Config.LOCAL_FILE_PATH)
     print(f"Upload file: {elapsed:.4f}s, {mem:.4f} MiB")
