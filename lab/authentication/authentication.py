@@ -1,5 +1,5 @@
 from msal import PublicClientApplication
-from config import Config
+from lab.configuration.config import Config
 
 def get_token():
     app = PublicClientApplication(client_id=Config.CLIENT_ID, authority=Config.AUTHORITY)
