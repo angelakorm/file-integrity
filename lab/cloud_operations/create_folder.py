@@ -1,4 +1,4 @@
-from config import Config
+from lab.configuration.config import Config
 import requests
 
 def create_folder(access_token, folder_name):

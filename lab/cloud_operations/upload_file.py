@@ -1,4 +1,4 @@
-from config import Config
+from lab.configuration.config import Config
 import requests
 import os
 
