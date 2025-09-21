@@ -29,3 +29,27 @@ The hypothesis was confirmed. Uploaded text and image files of different sizes h
 - Different Graph API operations testing
 - Graph API beta testing
 - Comparing cloud services
+
+### Environment variables
+Example .env:
+
+```dotenv
+# CLOUD SERVICE
+PROVIDER="Microsoft"
+
+# VERIFYING ALGORITHM
+VERIFIER="SHA256"
+
+# PATHS
+UPLOAD_FOLDER="Folder"
+DOWNLOAD_FOLDER_PATH="./files/downloads"
+LOCAL_FILE_PATH="./files/uploads/test1.txt"
+
+# MICROSOFT ONEDRIVE
+CLIENT_ID=your-client-id
+AUTHORITY="https://login.microsoftonline.com/consumers"
+GRAPH_API="https://graph.microsoft.com"
+VERSION="v1.0"
+RESOURCE="me/drive"
+SCOPES="Files.ReadWrite.All"
+```
