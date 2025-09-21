@@ -13,3 +13,5 @@ class Config:
     UPLOAD_FOLDER = os.getenv("UPLOAD_FOLDER")
     LOCAL_FILE_PATH = os.getenv("LOCAL_FILE_PATH")
     DOWNLOAD_FOLDER_PATH = os.getenv("DOWNLOAD_FOLDER_PATH")
+    PROVIDER = os.getenv("PROVIDER")
+    VERIFIER = os.getenv("VERIFIER")

@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class Authenticator(ABC):
+class Verifier(ABC):
     @abstractmethod
-    def get_access_token(self):
+    def verifying_algorithm(self, file_path):
         pass
