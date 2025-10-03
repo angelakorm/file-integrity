@@ -53,4 +53,7 @@ GRAPH_API="https://graph.microsoft.com"
 VERSION="v1.0"
 RESOURCE="me/drive"
 SCOPES="Files.ReadWrite.All"
+
+# DROPBOX
+DROPBOX_ACCESS_TOKEN="your-token"
 ```
