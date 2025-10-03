@@ -10,6 +10,7 @@
 - Microsoft Authentication Libraries (MSAL): `pip install msal`
 - requests: `pip install requests`
 - memory_profiler: `pip install memory-profiler`
+- Dropbox: `pip instal dropbox`
 
 ### Hypothesis
 Files uploaded to OneDrive and then downloaded will remain bit-for-bit identical, meaning their SHA-256 hashes should match.
