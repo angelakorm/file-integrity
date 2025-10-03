@@ -1,3 +1,4 @@
+from lab.authentication.dbx_authentication import DBXAuthentication
 from lab.authentication.ms_authentication import MSAuthentication
 from lab.integrity_verification.sha256 import SHA256
 from lab.performance import performance_measure
@@ -11,6 +12,9 @@ def main():
         access_token = authenticator.get_access_token()
         # access_token2 = authenticator.get_access_token()
         operations = MSOperations()
+    elif Config.PROVIDER == "Dropbox":
+        authenticator = DBXAuthentication()
+        access_token = authenticator.get_access_token()
     else:
         print("Invalid cloud provider.")
 

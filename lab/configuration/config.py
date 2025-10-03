@@ -15,3 +15,4 @@ class Config:
     DOWNLOAD_FOLDER_PATH = os.getenv("DOWNLOAD_FOLDER_PATH")
     PROVIDER = os.getenv("PROVIDER")
     VERIFIER = os.getenv("VERIFIER")
+    DROPBOX_ACCESS_TOKEN = os.getenv("DROPBOX_ACCESS_TOKEN")
