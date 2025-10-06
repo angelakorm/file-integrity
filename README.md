@@ -1,16 +1,17 @@
-## Investigating File Integrity in Microsoft OneDrive Using the Graph API
+## Investigating File Integrity in Microsoft OneDrive and Dropbox
 
 ### Prerequisites
 - Microsoft account
 - Microsoft Graph API access
 - Python 3.6+
+- Dropbox account
 
 ### Packages
 - .env: `pip install python-dotenv`
 - Microsoft Authentication Libraries (MSAL): `pip install msal`
 - requests: `pip install requests`
 - memory_profiler: `pip install memory-profiler`
-- Dropbox: `pip instal dropbox`
+- Dropbox: `pip install dropbox`
 
 ### Hypothesis
 Files uploaded to OneDrive and then downloaded will remain bit-for-bit identical, meaning their SHA-256 hashes should match.
