@@ -1,6 +1,7 @@
 from lab.authentication.dbx_authentication import DBXAuthentication
 from lab.authentication.ms_authentication import MSAuthentication
-from lab.integrity_verification.sha256 import SHA256
+from lab.cloud_operations.dbx_operations import DBXOperations
+from lab.hashing_algorithms.sha256 import SHA256
 from lab.performance import performance_measure
 from lab.configuration.config import Config
 from lab.cloud_operations.ms_operations import MSOperations
@@ -15,6 +16,7 @@ def main():
     elif Config.PROVIDER == "Dropbox":
         authenticator = DBXAuthentication()
         access_token = authenticator.get_access_token()
+        operations = DBXOperations()
     else:
         print("Invalid cloud provider.")
 
@@ -34,9 +36,9 @@ def main():
     download_hash = verifier.verifying_algorithm(f"{Config.DOWNLOAD_FOLDER_PATH}/{os.path.basename(Config.LOCAL_FILE_PATH)}")
 
     if original_hash == download_hash:
-        print("Hashes match.")
+        print("Hashes match, file integrity verified.")
     else:
-        print("Hashes do not match.")
+        print("Hashes do not match, file integrity not verified.")
 
 if __name__ == "__main__":
     main()
