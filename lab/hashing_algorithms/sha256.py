@@ -1,5 +1,5 @@
 import hashlib
-from lab.integrity_verification.verifier import Verifier
+from lab.hashing_algorithms.verifier import Verifier
 
 class SHA256(Verifier):
     def verifying_algorithm(self, file_path):

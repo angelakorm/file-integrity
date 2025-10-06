@@ -14,4 +14,4 @@ class DBXAuthentication(Authenticator):
         except Exception as e:
             print("Error authenticating:", e)
             return None
-        return dbx
+        return Config.DROPBOX_ACCESS_TOKEN
